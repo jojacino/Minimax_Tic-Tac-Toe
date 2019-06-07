@@ -1,0 +1,131 @@
+* {
+    font-family: 'Georgia', san-serif;
+    font-size: 1.2em;
+}
+
+::selection {
+    background: rgba(0,0,0,0);
+}
+
+::-moz-selection {
+    background: rgba(0,0,0,0);
+}
+
+/* game board classes */
+.game-header {
+    border: thick solid gray;
+    border-radius: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 2em;
+    height: 50px;
+    text-align: center;
+    color: darkgray;
+    text-shadow: 1px 2px 0 #000;
+}
+
+.game-button {
+    height: 50px;
+    width: 200px;
+    /**/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /**/
+    font-size: 0.8em;
+    color: #666;
+    text-shadow: 1px 2px 0 darkgray;
+    /**/
+    transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+}
+
+    .game-button:hover {
+        cursor: pointer;
+        color: #CCC;
+    }
+
+    .game-button:active {
+        color: #666;
+    }
+
+.selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection {
+    justify-content: flex-start;
+}
+
+.game-board {
+    /*border: solid gray;/**/
+    height: 350px;
+    width: 350px;
+    margin: 10px auto;
+}
+
+.game-square {
+    border: solid lightgray;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    font-size: 2.5em;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+    .game-square:hover {
+        border-color: darkgray;
+        box-shadow: 0 0 10px 3px #CCC;
+        cursor: pointer;
+    }
+
+    .game-square:active {
+        border-color: black;
+        box-shadow: 0 0 10px 3px #CCC inset;
+    }
+
+/* text classes */
+.text-silver {
+    color: darkgray;
+    text-shadow: 1px 2px 0 #666;
+}
+
+.text-black {
+    color: black;
+    text-shadow: 1px 2px 0 #CCC;
+}
+
+/* Internal Classes */
+.display-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: black;
+    border: ridge blue;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    color: white;
+    font-size: 4em;
+    text-shadow: 1px 2px 0 blue;
+    text-align: center;
+    height: 250px;
+    width: 400px;
+    box-shadow: 0 0 8px 0 #CCC inset;
+    -webkit-box-shadow: 0 0 8px 0 #CCC inset;
+    -moz-box-shadow: 0 0 8px 0 #CCC inset;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+}
