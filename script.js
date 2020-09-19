@@ -496,8 +496,8 @@ var T3 = ( function() {
 			if( !ui.locked )
 			{
 				switch( ui.selections[1].innerHTML ) {
-					case 'You Win!': ui.selections[1].innerHTML = 'Lose or Tie!'; break;
-					case 'You Lose!': ui.selections[1].innerHTML = 'Win or Tie!'; break;	
+					case 'Win or Tie!': ui.selections[1].innerHTML = 'Lose or Tie!'; break;
+					case 'Lose or Tie!': ui.selections[1].innerHTML = 'Win or Tie!'; break;	
 				}
 			}
 		});
