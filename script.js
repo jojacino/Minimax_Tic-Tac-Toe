@@ -1,5 +1,6 @@
 
 
+
 /**** Javascript : Tic Tac Toe w/ minimax | Author : Joseph Davidson | copyright @ 2016 ****/
 
 // enclosure for game module : prototyple revealing pattern
