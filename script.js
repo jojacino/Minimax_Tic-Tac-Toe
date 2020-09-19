@@ -74,7 +74,7 @@ var T3 = (function () {
     // Class : for Tic Tac Toe game
     var Game = function (level, human) {
 
-        this.level = level; // Game Play Level // You Win, or You Lose
+        this.level = level; // Game Play Level // Win or Tie!, or Lose or Tie!
         this.player = 'X'; // The Marker Chosen for the Human Player
         this.human = human; // Copy of the human for AI simulation
         this.computer = this.human === 'X' ? 'O' : 'X'; // Sets AI to Opposite of Human Marker
@@ -86,7 +86,7 @@ var T3 = (function () {
     Game.numeric_level = function (level) {
 
         // switch to convert string to numeric level
-        switch (level) { case 'You Win!': return 3; case 'You Lose!': return 4; }
+        switch (level) { case 'Win or Tie!': return 3; case 'Lose or Tie!': return 4; }
 
     }; // returns numeric representation of game @level : 1-3
     Game.prototype.gameover = function (board) {
@@ -470,8 +470,8 @@ var T3 = (function () {
             // check for panel lock
             if (!ui.locked) {
                 switch (ui.selections[1].innerHTML) {
-                    case 'You Win!': ui.selections[1].innerHTML = 'You Lose!'; break;
-                    case 'You Lose!': ui.selections[1].innerHTML = 'You Win!'; break;
+                    case 'Win or Tie!': ui.selections[1].innerHTML = 'Lose or Tie!'; break;
+                    case 'Lose or Tie!': ui.selections[1].innerHTML = 'Win or Tie!'; break;
                 }
             }
         });
