@@ -92,7 +92,7 @@ var T3 = ( function() {
 	Game.numeric_level = function( level ) {
 		
 		// switch to convert string to numeric level
-		switch( level ) {	case 'You Win!': return 3; case 'You Lose!': return 4; }
+		switch( level ) {	case 'Win or Tie!': return 3; case 'Lose or Tie!': return 4; }
 		
 	}; // returns numeric representation of game @level : 1-3
 	Game.prototype.gameover = function( board ) {
@@ -277,11 +277,11 @@ var T3 = ( function() {
 		if( player === this.computer )
 		{
 			// algorith for Hard level 
-			if( this.level.string === 'You Lose!' )
+			if( this.level.string === 'Lose or Tie!' )
 			{
 				move_map.sort( Util.sort_maxi );
 			}
-			else // algorithm for Easy level "You Win!"
+			else // algorithm for Easy level "Win or Tie!"
 			{
 				move_map.sort( Util.sort_mini );
 			}
@@ -289,7 +289,7 @@ var T3 = ( function() {
 		else
 		{
 			// algorithm for You Lose level 
-			if( this.level.string === 'You Lose!' )
+			if( this.level.string === 'Lose or Tie!' )
 			{
 				move_map.sort( Util.sort_mini );
 			}
@@ -406,6 +406,7 @@ var T3 = ( function() {
 		
 		// set position to math on window.innerWidth
 		p.style.position = 'absolute';
+		p.style.padding = '25px';
 		p.style.top = '20px';
 		p.style.left = window.innerWidth / 2 - 200 + 'px';
 		
@@ -466,7 +467,7 @@ var T3 = ( function() {
 		{
 			this.display_message( 'Game Reset.'); // post message to screen
 			this.selections[0].innerHTML = 'X';
-			this.selections[1].innerHTML = 'You Lose!';
+			this.selections[1].innerHTML = 'Lose or Tie!';
 		}
 		
 		return this;
@@ -495,8 +496,8 @@ var T3 = ( function() {
 			if( !ui.locked )
 			{
 				switch( ui.selections[1].innerHTML ) {
-					case 'You Win!': ui.selections[1].innerHTML = 'You Lose!'; break;
-					case 'You Lose!': ui.selections[1].innerHTML = 'You Win!'; break;	
+					case 'You Win!': ui.selections[1].innerHTML = 'Lose or Tie!'; break;
+					case 'You Lose!': ui.selections[1].innerHTML = 'Win or Tie!'; break;	
 				}
 			}
 		});
