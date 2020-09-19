@@ -62,6 +62,7 @@
 }
 
 .selection {
+    font-size: 14pt;
     justify-content: flex-start;
 }
 
